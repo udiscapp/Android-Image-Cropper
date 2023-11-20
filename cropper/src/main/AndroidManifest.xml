@@ -16,10 +16,11 @@
             android:name=".CropFileProvider"
             android:authorities="${applicationId}.cropper.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="false">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/library_file_paths" />
+            <grant-uri-permission android:pathPattern=".*" />
         </provider>
         <activity
             android:name=".CropImageActivity"
